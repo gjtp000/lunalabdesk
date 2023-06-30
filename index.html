@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNA LAB</title>
+    <link rel="stylesheet" href="luna.css">
+</head>
+<body>
+    <input type="checkbox" id="zoomPre">
+    <div class="lunaPreview">
+        <!-- 상판색상 -->
+        <input type="radio" id="black" name="color" checked>
+        <input type="radio" id="white" name="color">
+        <input type="radio" id="pink" name="color">
+        <input type="radio" id="carbon" name="color">
+        <input type="radio" id="sprite" name="color">
+        <input type="radio" id="light" name="color">
+        <input type="radio" id="dark" name="color">
+        <input type="radio" id="walnut" name="color">
+        <!-- 상판너비 -->
+        <input type="radio" id="small" name="size" checked>
+        <input type="radio" id="middle" name="size">
+        <input type="radio" id="large" name="size">
+        <!-- 상판모양 -->
+        <input type="radio" id="basic" name="shape" checked>
+        <input type="radio" id="curve" name="shape">
+        <!-- 다리색상 -->
+        <input type="radio" id="legBlack" name="legColor" checked>
+        <input type="radio" id="legWhite" name="legColor">
+
+
+        <div class="previewTitle">
+            <img src="logo.png" alt="">
+            <h4>듀얼모터 전동책상</h4>
+        </div>
+        <div class="previewVisual">
+
+            <img src="black_basic_1200.png" alt="" class="bbs">
+            <img src="black_basic_1500.png" alt="" class="bbm">
+            <img src="black_basic_1800.png" alt="" class="bbl">
+            <img src="black_curve_1200.png" alt="" class="bcs">
+            <img src="black_curve_1500.png" alt="" class="bcm">
+            <img src="black_curve_1800.png" alt="" class="bcl">
+            <img src="white_basic_1200.png" alt="" class="wbs">
+            <img src="white_basic_1500.png" alt="" class="wbm">
+            <img src="white_basic_1800.png" alt="" class="wbl">
+            <img src="white_curve_1200.png" alt="" class="wcs">
+            <img src="white_curve_1500.png" alt="" class="wcm">
+            <img src="white_curve_1800.png" alt="" class="wcl">
+            <img src="pink_curve_1200.png" alt="" class="pcs">
+            <img src="pink_curve_1500.png" alt="" class="pcm">
+            <img src="pink_curve_1800.png" alt="" class="pcl">
+            <img src="carbon_curve_1200.png" alt="" class="ccs">
+            <img src="carbon_curve_1500.png" alt="" class="ccm">
+            <img src="carbon_curve_1800.png" alt="" class="ccl">
+            <img src="stripe_basic_1200.png" alt="" class="sbs">
+            <img src="stripe_basic_1500.png" alt="" class="sbm">
+            <img src="stripe_basic_1800.png" alt="" class="sbl">
+            <img src="stripe_curve_1200.png" alt="" class="scs">
+            <img src="stripe_curve_1500.png" alt="" class="scm">
+            <img src="stripe_curve_1800.png" alt="" class="scl">
+            <img src="light_basic_1200.png" alt="" class="mlbs">
+            <img src="light_basic_1500.png" alt="" class="mlbm">
+            <img src="light_basic_1800.png" alt="" class="mlbl">
+            <img src="light_curve_1200.png" alt="" class="mlcs">
+            <img src="light_curve_1500.png" alt="" class="mlcm">
+            <img src="light_curve_1800.png" alt="" class="mlcl">
+            <img src="dark_basic_1200.png" alt="" class="mdbs">
+            <img src="dark_basic_1500.png" alt="" class="mdbm">
+            <img src="dark_basic_1800.png" alt="" class="mdbl">
+            <img src="dark_curve_1200.png" alt="" class="mdcs">
+            <img src="dark_curve_1500.png" alt="" class="mdcm">
+            <img src="dark_curve_1800.png" alt="" class="mdcl">
+            <img src="walnut_basic_1200.png" alt="" class="mwbs">
+            <img src="walnut_basic_1500.png" alt="" class="mwbm">
+            <img src="walnut_basic_1800.png" alt="" class="mwbl">
+
+            <img src="black_leg_1200.png" alt="" style="z-index: -3;" class="bls">
+            <img src="black_leg_1500.png" alt="" style="z-index: -3;" class="blm">
+            <img src="black_leg_1800.png" alt="" style="z-index: -3;" class="bll">
+            <img src="white_leg_1200.png" alt="" style="z-index: -3;" class="wls">
+            <img src="white_leg_1500.png" alt="" style="z-index: -3;" class="wlm">
+            <img src="white_leg_1800.png" alt="" style="z-index: -3;" class="wll">
+
+            <img src="noprod-01.jpg" alt="" class="pnp">
+            <img src="noprod-02.jpg" alt="" class="cnp">
+            <img src="noprod-03.jpg" alt="" class="mwnp">
+        </div>
+        <div class="deskTopOption">
+            <strong>상판색상</strong>
+            <ul class="deskTopColor">
+                <li>
+                    <label for="black">
+                        <div class="colorOptionBlack"></div>
+                        <span>블랙</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="white">
+                        <div class="colorOptionWhite"></div>
+                        <span>화이트</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="pink">
+                        <div class="colorOptionPink"></div>
+                        <span>핑크</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="carbon">
+                        <div class="colorOptionCarbon"></div>
+                        <span>카본 파이버</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="sprite">
+                        <div class="colorOptionStripe"></div>
+                        <span>스프라이트</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="light">
+                        <div class="colorOptionLight"></div>
+                        <span>모던 라이트</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="dark">
+                        <div class="colorOptionDark"></div>
+                        <span>모던 다크</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="walnut">
+                        <div class="colorOptionWalnut"></div>
+                        <span>모던 월넛</span>
+                    </label>
+                </li>
+            </ul>
+            <div class="sizeShape">
+                <div class="sizeWrap">
+                    <strong>상판너비</strong>
+                    <ul class="deskTopSize">
+                        <li>
+                            <label for="small">
+                                <span>1200mm</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="middle">
+                                <span>1500mm</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="large">
+                                <span>1800mm</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <strong>상판모양</strong>
+                    <ul class="deskTopShape">
+                        <li>
+                            <label for="basic">
+                                <span>일반형</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="curve">
+                                <span>커브형</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shapeWrap">
+                    <strong>다리색상</strong>
+                    <ul class="deskLegColor">
+                        <li>
+                            <label for="legBlack">
+                                <div class="colorOptionBlack"></div>
+                                <span>블랙</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="legWhite">
+                                <div class="colorOptionWhite"></div>
+                                <span>화이트</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

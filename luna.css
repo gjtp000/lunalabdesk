@@ -1,0 +1,519 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Pretendard-Regular';
+}
+input {
+    display: none;
+}
+
+/*전체화면 설정*/
+.lunaPreview {
+    width: 860px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.lunaPreview img {
+    vertical-align: middle;
+    height: 18px;
+}
+.lunaPreview h4 {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.lunaPreview p:hover {
+    width: 400px;
+}
+.lunaPreview p:hover strong {
+    display: none;
+}
+.lunaPreview p span {
+    font-size: 14px;
+}
+.previewTitle {
+    position: relative;
+}
+
+/*미리보기 비주얼*/
+.previewVisual {
+    width: 860px;
+    height: 483.75px;
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.previewVisual img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+    width: 105%;
+    height: 105%;
+    transition: opacity 0.3s;
+}
+
+#black:checked ~ #small:checked ~ #basic:checked ~ .previewVisual .bbs {
+    opacity: 1;
+}
+#black:checked ~ #middle:checked ~ #basic:checked ~ .previewVisual .bbm {
+    opacity: 1;
+}
+#black:checked ~ #large:checked ~ #basic:checked ~ .previewVisual .bbl {
+    opacity: 1;
+}
+#black:checked ~ #small:checked ~ #curve:checked ~ .previewVisual .bcs {
+    opacity: 1;
+}
+#black:checked ~ #middle:checked ~ #curve:checked~ .previewVisual .bcm {
+    opacity: 1;
+}
+#black:checked ~ #large:checked ~ #curve:checked ~ .previewVisual .bcl {
+    opacity: 1;
+}
+#white:checked ~ #small:checked ~ #basic:checked ~ .previewVisual .wbs {
+    opacity: 1;
+}
+#white:checked ~ #middle:checked ~ #basic:checked ~ .previewVisual .wbm {
+    opacity: 1;
+}
+#white:checked ~ #large:checked ~ #basic:checked ~ .previewVisual .wbl {
+    opacity: 1;
+}
+#white:checked ~ #small:checked ~ #curve:checked ~ .previewVisual .wcs {
+    opacity: 1;
+}
+#white:checked ~ #middle:checked ~ #curve:checked~ .previewVisual .wcm {
+    opacity: 1;
+}
+#white:checked ~ #large:checked ~ #curve:checked ~ .previewVisual .wcl {
+    opacity: 1;
+}
+#pink:checked ~ #small:checked ~ #curve:checked ~ .previewVisual .pcs {
+    opacity: 1;
+}
+#pink:checked ~ #middle:checked ~ #curve:checked~ .previewVisual .pcm {
+    opacity: 1;
+}
+#pink:checked ~ #large:checked ~ #curve:checked ~ .previewVisual .pcl {
+    opacity: 1;
+}
+#pink:checked ~ #small:checked ~ #basic:checked ~ .previewVisual .pnp {
+    opacity: 1;
+}
+#pink:checked ~ #middle:checked ~ #basic:checked ~ .previewVisual .pnp {
+    opacity: 1;
+}
+#pink:checked ~ #large:checked ~ #basic:checked ~ .previewVisual .pnp {
+    opacity: 1;
+}
+#carbon:checked ~ #small:checked ~ #basic:checked ~ .previewVisual .cnp {
+    opacity: 1;
+}
+#carbon:checked ~ #middle:checked ~ #basic:checked ~ .previewVisual .cnp {
+    opacity: 1;
+}
+#carbon:checked ~ #large:checked ~ #basic:checked ~ .previewVisual .cnp {
+    opacity: 1;
+}
+#carbon:checked ~ #small:checked ~ #curve:checked ~ .previewVisual .ccs {
+    opacity: 1;
+}
+#carbon:checked ~ #middle:checked ~ #curve:checked ~ .previewVisual .ccm {
+    opacity: 1;
+}
+#carbon:checked ~ #large:checked ~ #curve:checked ~ .previewVisual .ccl {
+    opacity: 1;
+}
+#sprite:checked ~ #small:checked ~ #basic:checked ~ .previewVisual .sbs {
+    opacity: 1;
+}
+#sprite:checked ~ #middle:checked ~ #basic:checked ~ .previewVisual .sbm {
+    opacity: 1;
+}
+#sprite:checked ~ #large:checked ~ #basic:checked ~ .previewVisual .sbl {
+    opacity: 1;
+}
+#sprite:checked ~ #small:checked ~ #curve:checked ~ .previewVisual .scs {
+    opacity: 1;
+}
+#sprite:checked ~ #middle:checked ~ #curve:checked ~ .previewVisual .scm {
+    opacity: 1;
+}
+#sprite:checked ~ #large:checked ~ #curve:checked ~ .previewVisual .scl {
+    opacity: 1;
+}
+#light:checked ~ #small:checked ~ #basic:checked ~ .previewVisual .mlbs {
+    opacity: 1;
+}
+#light:checked ~ #middle:checked ~ #basic:checked ~ .previewVisual .mlbm {
+    opacity: 1;
+}
+#light:checked ~ #large:checked ~ #basic:checked ~ .previewVisual .mlbl {
+    opacity: 1;
+}
+#light:checked ~ #small:checked ~ #curve:checked ~ .previewVisual .mlcs {
+    opacity: 1;
+}
+#light:checked ~ #middle:checked ~ #curve:checked ~ .previewVisual .mlcm {
+    opacity: 1;
+}
+#light:checked ~ #large:checked ~ #curve:checked ~ .previewVisual .mlcl {
+    opacity: 1;
+}
+#dark:checked ~ #small:checked ~ #basic:checked ~ .previewVisual .mdbs {
+    opacity: 1;
+}
+#dark:checked ~ #middle:checked ~ #basic:checked ~ .previewVisual .mdbm {
+    opacity: 1;
+}
+#dark:checked ~ #large:checked ~ #basic:checked ~ .previewVisual .mdbl {
+    opacity: 1;
+}
+#dark:checked ~ #small:checked ~ #curve:checked ~ .previewVisual .mdcs {
+    opacity: 1;
+}
+#dark:checked ~ #middle:checked ~ #curve:checked ~ .previewVisual .mdcm {
+    opacity: 1;
+}
+#dark:checked ~ #large:checked ~ #curve:checked ~ .previewVisual .mdcl {
+    opacity: 1;
+}
+#walnut:checked ~ #small:checked ~ #basic:checked ~ .previewVisual .mwbs {
+    opacity: 1;
+}
+#walnut:checked ~ #middle:checked ~ #basic:checked ~ .previewVisual .mwbm {
+    opacity: 1;
+}
+#walnut:checked ~ #large:checked ~ #basic:checked ~ .previewVisual .mwbl {
+    opacity: 1;
+}
+#walnut:checked ~ #small:checked ~ #curve:checked ~ .previewVisual .mwnp {
+    opacity: 1;
+}
+#walnut:checked ~ #middle:checked ~ #curve:checked ~ .previewVisual .mwnp {
+    opacity: 1;
+}
+#walnut:checked ~ #large:checked ~ #curve:checked ~ .previewVisual .mwnp {
+    opacity: 1;
+}
+
+
+
+
+#small:checked ~ #legBlack:checked ~ .previewVisual .bls {
+    opacity: 1;
+}
+#middle:checked ~ #legBlack:checked ~ .previewVisual .blm {
+    opacity: 1;
+}
+#large:checked ~ #legBlack:checked ~ .previewVisual .bll {
+    opacity: 1;
+}
+#small:checked ~ #legWhite:checked ~ .previewVisual .wls {
+    opacity: 1;
+}
+#middle:checked ~ #legWhite:checked ~ .previewVisual .wlm {
+    opacity: 1;
+}
+#large:checked ~ #legWhite:checked ~ .previewVisual .wll {
+    opacity: 1;
+}
+
+
+
+
+/*상판선택 옵션(상판색상)*/
+.deskTopOption strong {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.deskTopOption ul.deskTopColor {
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.deskTopOption ul.deskTopColor li {
+    width: 95px;
+    height: 100px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(179, 179, 179);
+    transition: all 0.3s;
+}
+.deskTopOption ul.deskTopColor li:hover {
+    box-shadow: rgb(211, 211, 211) 1px 1px 5px;
+}
+.deskTopOption ul.deskTopColor li label {
+    cursor: pointer;
+}
+.deskTopOption ul.deskTopColor li label div {
+    width: 110px;
+    height: 70px;
+}
+.deskTopOption ul.deskTopColor li label span {
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+.deskTopOption ul.deskTopColor li:nth-child(1) label div {
+    background: url(thum_black.jpg) center;
+    background-size: 100% auto;
+}
+.deskTopOption ul.deskTopColor li:nth-child(2) label div {
+    background: url(thum_white.jpg) center;
+    background-size: 100% auto;
+}
+.deskTopOption ul.deskTopColor li:nth-child(3) label div {
+    background: url(thum_pink.jpg) center;
+    background-size: 100% auto;
+}
+.deskTopOption ul.deskTopColor li:nth-child(4) label div {
+    background: url(thum_carbon.jpg) center;
+    background-size: 100% auto;
+}
+.deskTopOption ul.deskTopColor li:nth-child(5) label div {
+    background: url(thum_stripe.jpg) center;
+    background-size: 100% auto;
+}
+.deskTopOption ul.deskTopColor li:nth-child(6) label div {
+    background: url(thum_light.jpg) center;
+    background-size: 100% auto;
+}
+.deskTopOption ul.deskTopColor li:nth-child(7) label div {
+    background: url(thum_dark.jpg) center;
+    background-size: 100% auto;
+}
+.deskTopOption ul.deskTopColor li:nth-child(8) label div {
+    background: url(thum_walnut.jpg) center;
+    background-size: 100% auto;
+}
+/*상판선택 옵션(상판크기)*/
+.sizeShape {
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+}
+.sizeWrap {
+    width: 600px;
+}
+.shapeWrap {
+    width: 205px;
+}
+.deskTopOption ul.deskTopSize {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.deskTopOption ul.deskTopSize li {
+    width: 30%;
+    height: 30px;
+    background-color: #f7f7f7;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius: 5px;
+    color: rgb(179, 179, 179);
+}
+.deskTopOption ul.deskTopSize li:hover {
+    box-shadow: rgb(211, 211, 211) 1px 1px 5px;
+}
+.deskTopOption ul.deskTopSize li span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.shapeWrap {
+    margin-bottom: 15px;
+}
+/*상판선택 옵션(상판모양)*/
+.deskTopOption ul.deskTopShape {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.deskTopOption ul.deskTopShape li {
+    width: 48%;
+    height: 30px;
+    background-color: #f7f7f7;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius: 5px;
+    color: rgb(179, 179, 179);
+}
+.deskTopOption ul.deskTopShape li:hover {
+    box-shadow: rgb(211, 211, 211) 1px 1px 5px;
+}
+.deskTopOption ul.deskTopShape li span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
+/*다리색상*/
+.deskTopOption ul.deskLegColor {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.deskTopOption ul.deskLegColor li {
+    width: 95px;
+    height: 100px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(179, 179, 179);
+    transition: all 0.3s;
+}
+.deskTopOption ul.deskLegColor li:hover {
+    box-shadow: rgb(211, 211, 211) 1px 1px 5px;
+}
+.deskTopOption ul.deskLegColor li label {
+    cursor: pointer;
+}
+.deskTopOption ul.deskLegColor li label div {
+    width: 110px;
+    height: 70px;
+}
+.deskTopOption ul.deskLegColor li label span {
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.deskTopOption ul.deskLegColor li:nth-child(1) label div {
+    background-color: #000;
+}
+.deskTopOption ul.deskLegColor li:nth-child(2) label div {
+    background: url(thum_white.jpg) center;
+    background-size: 100% auto;
+}
+
+
+#black:checked ~ .deskTopOption .deskTopColor li:nth-child(1) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#white:checked ~ .deskTopOption .deskTopColor li:nth-child(2) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#pink:checked ~ .deskTopOption .deskTopColor li:nth-child(3) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#carbon:checked ~ .deskTopOption .deskTopColor li:nth-child(4) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#sprite:checked ~ .deskTopOption .deskTopColor li:nth-child(5) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#light:checked ~ .deskTopOption .deskTopColor li:nth-child(6) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#dark:checked ~ .deskTopOption .deskTopColor li:nth-child(7) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#walnut:checked ~ .deskTopOption .deskTopColor li:nth-child(8) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#small:checked ~ .deskTopOption .deskTopSize li:nth-child(1) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#middle:checked ~ .deskTopOption .deskTopSize li:nth-child(2) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#large:checked ~ .deskTopOption .deskTopSize li:nth-child(3) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#basic:checked ~ .deskTopOption .deskTopShape li:nth-child(1) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#curve:checked ~ .deskTopOption .deskTopShape li:nth-child(2) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#legBlack:checked ~ .deskTopOption .deskLegColor li:nth-child(1) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+#legWhite:checked ~ .deskTopOption .deskLegColor li:nth-child(2) {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+}
+
+
+/* .previewTitle label {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: #ccc 2px 2px 5px;
+} */
+
